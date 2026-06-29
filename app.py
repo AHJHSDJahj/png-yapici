@@ -4,7 +4,23 @@ from PIL import Image
 import io
 
 # Sayfa ayarları
-st.set_page_config(page_title="PNG Yapıcı", page_icon="🖼️")
+import streamlit as st
+# (Diğer import kodların aynen kalsın...)
+
+# Google ve arama motorları için siteni optimize eden ayarlar
+st.set_page_config(
+    page_title="PNG Çevirme & Arka Plan Silme Sitesi - Ücretsiz PNG Yapma", 
+    page_icon="🖼️",
+    menu_items={
+        'Get Help': 'https://github.com',
+        'Report a bug': "https://github.com",
+        'About': "# PNG Çevirici\nEn iyi ücretsiz png upload, png yapma ve arka plan silme aracı!"
+    }
+)
+
+# Sitenin içine de Google'ın okuyacağı anahtar kelimeleri gizlice yerleştirelim
+st.markdown("<h1 style='text-align: center;'>Ücretsiz PNG Yapma ve PNG Çevirme Sitesi</h1>", unsafe_allow_html=True)
+st.write("En hızlı PNG çevirici ve PNG upload aracı. Fotoğrafınızı yükleyin ve saniyeler içinde arka planını silerek şeffaf yapın.")
 
 st.title("🖼️ Arka Plan Silme & PNG Yapma Sitesi")
 st.write("Fotoğrafınızı yükleyin, saniyeler içinde arka planı silinsin!")
